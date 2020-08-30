@@ -18,13 +18,13 @@
   },
   "homepage": "https://github.com/Ulises-Berasain/pokedex-api#readme",
   "devDependencies": {
-    "@types/jquery": "^3.5.1",
-    "bootstrap": "^4.5.2",
     "cypress": "^4.12.1",
-    "jquery": "^1.12.4",
     "popper.js": "^1.16.1"
   },
   "dependencies": {
-    "eslint": "^7.7.0"
+    "eslint": "^7.7.0",
+    "jquery": "^1.12.4",
+    "@types/jquery": "^3.5.1",
+    "bootstrap": "^4.5.2"
   }
 }
