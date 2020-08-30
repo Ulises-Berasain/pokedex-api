@@ -1,0 +1,254 @@
+#titulo{
+    text-align: center;
+    margin-top: 0%;
+    background: orange;
+}
+
+#pokedex-logo{
+    margin-top: 1%;
+    margin-bottom: 0.5%;
+}
+
+.pokedex-contenedor{
+    background: orange;
+}
+
+#pokemon{
+    font-weight: 600;
+    margin-top: 1%;
+    margin-bottom: 0.5%;
+    margin-left: 1%;
+}
+
+#boton-ingresar{
+    font-weight: 600;
+}
+#boton-ingresar:hover{
+    background:yellow;
+}
+
+
+#pokemon-logo{
+    width: 12%;
+    height: 12%;
+}
+
+#boton-anterior{
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 1%;
+    font-weight: 600;
+    color:black;
+}
+
+#boton-siguiente{
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 1%;
+    font-weight: 600;
+    color:black;
+}
+
+#boton-anterior:hover{
+    background:yellow;
+}
+
+#boton-siguiente:hover{
+    background:yellow;
+}
+
+#pokemones{
+    font-weight: 700;
+    color: solid black;
+    border: 1px solid black;
+    background-image: url(img/pokeball-logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 45px 45px;
+}
+
+#pokemones:hover{
+    background: yellow;
+    border: 1px solid black;
+    background-image: url(img/pokeball-logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 45px 45px;
+}
+#total-pokemon-parrafo{
+    font-weight: 500;
+}
+
+#descripcion-pokemon{
+    font-weight: 500;
+}
+#estadistica-pokemon{
+    font-weight: 500;
+}
+
+#cuerpo-tarjeta{
+    border: 3px solid black;
+    background: #FFB74D;
+    background-image: url(img/pokeball-logo.png);
+    background-repeat: no-repeat;
+    background-size: 100px 100px;
+    background-position: right bottom;
+}
+
+#pokemon-imagen{
+    border: 3px solid black;
+    margin-bottom: 1%;
+    background-image: url(img/fondo-batalla.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 398px 398px;
+}
+
+#tarjeta-pokemon{
+    background: orange;
+}
+
+#habilidades-titulo{
+    text-decoration-line: underline;
+}
+
+#estadisticas-base-titulo{
+    text-decoration-line: underline;
+}
+
+#pokemon-tipos{
+    text-decoration-line: underline;
+}
+
+#steel{
+    background: lightgray;
+    border: 1px solid silver;
+    font-weight: 700;
+    color: white;
+}
+
+#water{
+    background: royalblue;
+    border: 1px solid mediumslateblue;
+    font-weight: 700;
+    color: white;
+}
+
+#bug{
+    background: yellowgreen;
+    border: 1px solid olivedrab;
+    font-weight: 700;
+    color: white;
+}
+
+#dragon{
+    background: mediumslateblue;
+    border: 1px solid slateblue;
+    font-weight: 700;
+    color: white;
+}
+
+#electric{
+    background: yellow;
+    border: 1px solid gold;
+    font-weight: 700;
+    color: white;
+}
+
+#ghost{
+    background: purple;
+    border: 1px solid indigo;
+    font-weight: 700;
+    color: white;
+}
+
+#fire{
+    background: crimson;
+    border: 1px solid firebrick;
+    font-weight: 700;
+    color: white;
+}
+
+#fairy{
+    background: rgb(255, 136, 238);
+    border: 1px solid rgb(255, 187, 238);
+    font-weight: 700;
+    color: white;
+}
+
+#ice{
+    background: aquamarine;
+    border: 1px solid paleturquoise;
+    font-weight: 700;
+    color: white;
+}
+
+#fighting{
+    background: firebrick;
+    border: 1px solid darkred;
+    font-weight: 700;
+    color: white;
+}
+
+#normal{
+    background: rgb(214, 214, 224);
+    border: 1px solid gainsboro;
+    font-weight: 700;
+    color: white;
+}
+
+#grass{
+    background: rgb(3, 217, 3);
+    border: 1px solid limegreen;
+    font-weight: 700;
+    color: white;
+}
+
+#psychic{
+    background: violet;
+    border: 1px solid plum;
+    font-weight: 700;
+    color: white;
+}
+
+#rock{
+    background: peru;
+    border: 1px solid chocolate;
+    font-weight: 700;
+    color: white;
+}
+
+#dark{
+    background: slategray;
+    border: 1px solid darkslategray;
+    font-weight: 700;
+    color: white;
+}
+
+#ground{
+    background: burlywood;
+    border: 1px solid tan;
+    font-weight: 700;
+    color: white;
+}
+
+#poison{
+    background: mediumpurple;
+    border: 1px solid blueviolet;
+    font-weight: 700;
+    color: white;
+}
+
+#flying{
+    background: lightskyblue;
+    border: 1px skyblue;
+    font-weight: 700;
+    color: white;
+}
+
+#error{
+    color: crimson;
+    font-weight: 700;
+    background: white;
+    text-align: center;
+}

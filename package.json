@@ -1,0 +1,30 @@
+{
+  "name": "pokedex-api",
+  "version": "1.0.0",
+  "description": "Pokedex",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress-dev": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ulises-Berasain/pokedex-api.git"
+  },
+  "author": "Ulises Berasain",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ulises-Berasain/pokedex-api/issues"
+  },
+  "homepage": "https://github.com/Ulises-Berasain/pokedex-api#readme",
+  "devDependencies": {
+    "@types/jquery": "^3.5.1",
+    "bootstrap": "^4.5.2",
+    "cypress": "^4.12.1",
+    "jquery": "^1.12.4",
+    "popper.js": "^1.16.1"
+  },
+  "dependencies": {
+    "eslint": "^7.7.0"
+  }
+}

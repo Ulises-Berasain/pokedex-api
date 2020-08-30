@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" href="img/pokeball-logo.png" />
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Pokedex</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='estilos.css'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+<body>
+    <h1 id="titulo"><img src="img/pokedex-logo.png" id="pokedex-logo"></img></h1>
+
+    <div class="pokedex-contenedor">
+        <div id="pokedex">
+            <img src="img/pokemon-logo.png" class="rounded mx-auto d-block" id="pokemon-logo">
+            <p id="error"></p>
+            <input type="text" id="pokemon" placeholder="Ingrese un pokemon"></input>
+            <button type="button" id="boton-ingresar" >Ingresar</button>
+            <p id="total-pokemon-parrafo">Hay un total de <strong id="total-pokemon"></strong> Pokemon</p>
+            <div id="botones">
+                <button type="button" id="boton-anterior">Anterior</button>
+                <button type="button" id="boton-siguiente">Siguiente</button>
+            </div>
+            <div>
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination" id="paginador">
+                    </ul>
+                  </nav>
+                <div id="pokemon-contenedor"></div>
+            </div>
+            <div class="row">
+            <div class="col-6">
+            <div class="list-group" id="lista-pokemon">
+
+            </div>
+            </div>
+            <div class="col-6">
+                <div class="card" style="width: 25rem;" id="tarjeta-pokemon">
+                    <img src="img/que-pokemon.png" id="pokemon-imagen" class="card-img-top">
+                    <div class="card-body" id="cuerpo-tarjeta">
+                      <h1 class="card-title"><strong id="nombre-pokemon">... </strong><strong id="pokemon-id">...</strong></h1>
+                      <div id="estadisticas-base-contenedor">
+                        <strong id="estadisticas-base-titulo">Stats base</strong>
+                        <div id="estadisticas-base">
+                            
+                        </div>
+                      </div>
+                      <div id="habilidades-contenedor">
+                        <strong id="habilidades-titulo">Habilidades</strong>
+                        <div id="habilidades">
+
+                        </div>
+                      </div>
+                      <div id="tipos-contenedor">
+                          <strong id="pokemon-tipos">Tipo</strong>
+                          <div id="tipos">
+
+                          </div>
+                      </div>
+                    </div>
+                </div>
+                
+            </div>
+         </div>
+            <div id="botones">
+                <button type="button" id="boton-anterior">Anterior</button>
+                <button type="button" id="boton-siguiente">Siguiente</button>
+            </div>
+        </div>
+        <div>
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src='src/main.js' type="module"></script>
+</body>
+</html>
