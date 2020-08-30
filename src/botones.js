@@ -1,3 +1,5 @@
+/// <reference types="jquery"/>
+
 import { mostrarListaPokemon, mostrarTotalPokemon } from "./mostrar.js";
 import { cargarTarjetaPokemon} from "./mostrar.js";
 
