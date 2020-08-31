@@ -252,3 +252,16 @@
     background: white;
     text-align: center;
 }
+
+#tabla{
+    border: 3px solid black;
+    background: #FFB74D;
+}
+
+#celda-tabla{
+    border: 2px solid black;
+}
+
+#titulo-tabla{
+    border: 2px solid black;
+}

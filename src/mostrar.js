@@ -26,17 +26,24 @@ export function cargarTarjetaPokemon(nombre){
     });
 };
 
-export function mostrarPokemon(pokemon){
-    const {abilities: habilidades, name: nombre, sprites: {other:{"official-artwork":{front_default: imagenOficial}}}, types: tipos, id, stats: estadisticas} = pokemon;
-
+function mostrarPokemon(pokemon){
+    const {abilities: habilidades, 
+        name: nombre, 
+        sprites: {other:{"official-artwork":{front_default: imagenOficial}}}, 
+        types: tipos, 
+        id, 
+        stats: estadisticas, 
+        moves: ataques} = pokemon;
+    console.log(pokemon)
     mostrarHabilidades(habilidades);
     mostrarImagen(imagenOficial, nombre);
     mostrarNombre(nombre, id);
     mostrarEstadisticasBase(estadisticas);
     mostrarTipos(tipos);
+    mostrarAtaques(ataques);
 };
 
-export function mostrarHabilidades(habilidades){
+function mostrarHabilidades(habilidades){
     const $habilidades = document.querySelector("#habilidades");
     $habilidades.innerHTML = "";
     habilidades.forEach((habilidad) =>{
@@ -54,14 +61,14 @@ export function mostrarHabilidades(habilidades){
 };
 
 
-export function mostrarImagen(imagenOficial, nombre){
+function mostrarImagen(imagenOficial, nombre){
     const $imagen = document.querySelector("#pokemon-imagen");
     $imagen.setAttribute("src", imagenOficial);
     $imagen.setAttribute("alt", `Imagen del pokemon ${nombre}`);
 };
 
 
-export function mostrarNombre(nombre, id){
+function mostrarNombre(nombre, id){
     const $nombrePokemon = document.querySelector("#nombre-pokemon");
     const $idPokemon = document.querySelector("#pokemon-id");
 
@@ -69,7 +76,7 @@ export function mostrarNombre(nombre, id){
     $idPokemon.textContent = `#${id}`;
 };
 
-export function mostrarEstadisticasBase(estadisticas){
+function mostrarEstadisticasBase(estadisticas){
     const $estadisticasBase = document.querySelector("#estadisticas-base");
     $estadisticasBase.innerHTML = "";
     estadisticas.forEach((stat)=>{
@@ -83,7 +90,7 @@ export function mostrarEstadisticasBase(estadisticas){
     });
 };
 
-export function mostrarTipos(tipos){
+function mostrarTipos(tipos){
     const $tipos = document.querySelector("#tipos");
     $tipos.innerHTML = "";
     tipos.forEach((tipo)=>{
@@ -93,5 +100,20 @@ export function mostrarTipos(tipos){
         $tipo.setAttribute("id", nombre);
         $tipo.textContent = nombre;
         $tipos.appendChild($tipo);
+    });
+};
+
+function mostrarAtaques(ataques){
+    const $celdaTabla = document.querySelector("#celda-tabla")
+    $celdaTabla = "";
+
+    ataques.forEach((ataque)=>{
+        const {move: {name: nombre}, version_group_details:{version_group:{name: version}}} = ataque
+        const $ataque = document.createElement("td");
+        const $version = document.createElement("td");
+        $ataque.innerText = nombre;
+        $version.innerText = version;
+
+        $celdaTabla.appendChild($ataque, $version);
     });
 };

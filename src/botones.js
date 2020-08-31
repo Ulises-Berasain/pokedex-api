@@ -1,7 +1,7 @@
 /// <reference types="jquery"/>
 
 import { mostrarListaPokemon, mostrarTotalPokemon } from "./mostrar.js";
-import { cargarTarjetaPokemon} from "./mostrar.js";
+import { cargarTarjetaPokemon } from "./mostrar.js";
 
 export function buscarPokemon(){
         const $botonIngresar = document.querySelector("#boton-ingresar");
