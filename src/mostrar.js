@@ -105,15 +105,18 @@ function mostrarTipos(tipos){
 
 function mostrarAtaques(ataques){
     const $celdaTabla = document.querySelector("#celda-tabla")
-    $celdaTabla = "";
-
+    $celdaTabla.innerHTML = "";
     ataques.forEach((ataque)=>{
         const {move: {name: nombre}, version_group_details:{version_group:{name: version}}} = ataque
+        const $ataqueFila = document.createElement("tr");
+        $ataqueFila.setAttribute("id", "celda-tabla");
         const $ataque = document.createElement("td");
         const $version = document.createElement("td");
-        $ataque.innerText = nombre;
-        $version.innerText = version;
+        $ataque.textContent = nombre;
+        $version.textContent = version;
 
-        $celdaTabla.appendChild($ataque, $version);
+        $ataqueFila.appendChild($ataque);
+        $ataqueFila.appendChild($version);
+        $celdaTabla.appendChild($ataqueFila);
     });
 };
