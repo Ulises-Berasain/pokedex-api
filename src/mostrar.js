@@ -104,19 +104,28 @@ function mostrarTipos(tipos){
 };
 
 function mostrarAtaques(ataques){
-    const $celdaTabla = document.querySelector("#celda-tabla")
+    const $celdaTabla = document.querySelector("#ataques")
     $celdaTabla.innerHTML = "";
     ataques.forEach((ataque)=>{
-        const {move: {name: nombre}, version_group_details:{version_group:{name: version}}} = ataque
+        const {move:{name: nombre}, version_group_details: versiones} = ataque
         const $ataqueFila = document.createElement("tr");
         $ataqueFila.setAttribute("id", "celda-tabla");
         const $ataque = document.createElement("td");
-        const $version = document.createElement("td");
+        const $versiones = document.createElement("td");
         $ataque.textContent = nombre;
-        $version.textContent = version;
 
         $ataqueFila.appendChild($ataque);
-        $ataqueFila.appendChild($version);
+        $celdaTabla.appendChild($ataqueFila);
+
+        versiones.forEach((version) =>{
+            const {version_group:{name: versionAtaque}} = version;
+            const $version = document.createElement("span");
+            $version.className = "badge";
+            $version.textContent = versionAtaque;
+            $versiones.appendChild($version);
+        })
+
+        $ataqueFila.appendChild($versiones);
         $celdaTabla.appendChild($ataqueFila);
     });
 };
