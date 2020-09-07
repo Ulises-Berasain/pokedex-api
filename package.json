@@ -4,8 +4,8 @@
   "description": "Pokedex",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "cypress-dev": "cypress open"
+    "cypress-dev": "cypress open",
+    "jest-dev": "jest"
   },
   "repository": {
     "type": "git",
@@ -18,13 +18,18 @@
   },
   "homepage": "https://github.com/Ulises-Berasain/pokedex-api#readme",
   "devDependencies": {
+    "@types/jquery": "^3.5.1",
     "cypress": "^4.12.1",
-    "popper.js": "^1.16.1"
+    "eslint": "^7.7.0",
+    "jest": "^26.4.2",
+    "jquery": "^1.12.4",
+    "popper.js": "^1.16.1",
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "@types/jest": "^26.0.13",
+    "babel-jest": "^26.3.0"
   },
   "dependencies": {
-    "eslint": "^7.7.0",
-    "jquery": "^1.12.4",
-    "@types/jquery": "^3.5.1",
     "bootstrap": "^4.5.2"
   }
 }

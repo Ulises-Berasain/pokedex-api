@@ -1,3 +1,5 @@
+import { cargarTarjetaPokemon } from "/src/api/pokemon-api.js"
+
 export function mostrarTotalPokemon(totalPokemon){
     document.querySelector("#total-pokemon").textContent = totalPokemon;
 };
@@ -18,15 +20,7 @@ export function mostrarListaPokemon(pokemones){
     });
 };
 
-export function cargarTarjetaPokemon(nombre){
-    fetch(`https://pokeapi.co/api/v2/pokemon/${nombre}`)
-    .then(r => r.json())
-    .then(pokemon =>{
-        mostrarPokemon(pokemon);
-    });
-};
-
-function mostrarPokemon(pokemon){
+export function mostrarPokemon(pokemon){
     const {abilities: habilidades, 
         name: nombre, 
         sprites: {other:{"official-artwork":{front_default: imagenOficial}}}, 
@@ -34,7 +28,6 @@ function mostrarPokemon(pokemon){
         id, 
         stats: estadisticas, 
         moves: ataques} = pokemon;
-    console.log(pokemon)
     mostrarHabilidades(habilidades);
     mostrarImagen(imagenOficial, nombre);
     mostrarNombre(nombre, id);
