@@ -1,4 +1,4 @@
-import { mostrarListaPokemon, mostrarTotalPokemon, mostrarTarjetaPokemon } from "/src/servicio/mostrar.js";
+import { mostrarListaPokemon, mostrarTotalPokemon, mostrarTarjetaPokemon } from "../servicio/mostrar.js";
 
 export function buscarPokemon(){
         const $botonIngresar = document.getElementById("boton-ingresar");

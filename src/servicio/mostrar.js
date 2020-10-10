@@ -1,4 +1,4 @@
-import { cargarTarjetaPokemon } from "/src/api/pokemon-api.js"
+import { cargarTarjetaPokemon } from "../api/pokemon-api.js"
 
 export function mostrarTotalPokemon(totalPokemon){
     document.querySelector("#total-pokemon").textContent = totalPokemon;

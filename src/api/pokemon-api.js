@@ -4,6 +4,6 @@ export function cargarTarjetaPokemon(nombre){
 };
 
 export function cargarPokemons(){
-    return  fetch(`https://pokeapi.co/api/v2/pokemon/?offset=0}&limit=20`)
+    return  fetch(`https://pokeapi.co/api/v2/pokemon/?offset=0&limit=20`)
                   .then(r => r.json())
 };
