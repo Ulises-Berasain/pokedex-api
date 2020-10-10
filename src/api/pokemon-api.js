@@ -1,11 +1,6 @@
-import { mostrarPokemon } from "/src/servicio/mostrar.js"
-
 export function cargarTarjetaPokemon(nombre){
-    fetch(`https://pokeapi.co/api/v2/pokemon/${nombre}`)
-    .then(r => r.json())
-    .then(pokemon =>{
-        mostrarPokemon(pokemon);
-    });
+    return fetch(`https://pokeapi.co/api/v2/pokemon/${nombre}`)
+            .then(r => r.json())
 };
 
 export function cargarPokemons(){

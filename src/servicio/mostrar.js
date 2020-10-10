@@ -14,7 +14,7 @@ export function mostrarListaPokemon(pokemones){
         $link.setAttribute("id", "pokemones");
         $link.textContent = nombre;
         $link.addEventListener("click", () => {
-        cargarTarjetaPokemon(nombre);
+        mostrarTarjetaPokemon(nombre);
         });
         $listaPokemon.appendChild($link);
     });
@@ -35,6 +35,13 @@ export function mostrarPokemon(pokemon){
     mostrarTipos(tipos);
     mostrarAtaques(ataques);
 };
+
+export function mostrarTarjetaPokemon(nombre){
+    cargarTarjetaPokemon(nombre)
+    .then(pokemon =>{
+        mostrarPokemon(pokemon);
+    });
+}
 
 function mostrarHabilidades(habilidades){
     const $habilidades = document.querySelector("#habilidades");

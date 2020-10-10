@@ -1,22 +1,19 @@
-/// <reference types="jquery"/>
-
-import { mostrarListaPokemon, mostrarTotalPokemon } from "/src/servicio/mostrar.js";
-import { cargarTarjetaPokemon } from "/src/api/pokemon-api.js";
+import { mostrarListaPokemon, mostrarTotalPokemon, mostrarTarjetaPokemon } from "/src/servicio/mostrar.js";
 
 export function buscarPokemon(){
-        const $botonIngresar = document.querySelector("#boton-ingresar");
-        const $nombrePokemon = document.querySelector("#pokemon");
+        const $botonIngresar = document.getElementById("boton-ingresar");
 
         $botonIngresar.addEventListener("click", ()=>{
-            fetch(`https://pokeapi.co/api/v2/pokemon/${$($nombrePokemon).val()}`)
+            let $nombrePokemon = document.getElementById("pokemon").value;
+            fetch(`https://pokeapi.co/api/v2/pokemon/${$nombrePokemon}`)
             .then(r => r.json())
             .then(r => {
                 const {name: nombre} = r
-                cargarTarjetaPokemon(nombre);
-                $("#error").html("");
+                mostrarTarjetaPokemon(nombre);
+                document.getElementById("error").innerHTML = "";
             })
             .catch(error => {
-                $("#error").html("").html("Error! ingresar pokemon o ID validos y que su nombre este minuscula");
+                document.getElementById("error").innerHTML = "Error! ingresar pokemon o ID validos y que su nombre este minuscula";
             });
         });
 };
