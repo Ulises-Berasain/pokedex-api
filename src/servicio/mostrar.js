@@ -8,9 +8,8 @@ export function mostrarListaPokemon(pokemones){
     const $listaPokemon = document.querySelector("#lista-pokemon");
     pokemones.forEach((pokemon)=>{
         const {name: nombre} = pokemon;
-        const $link = document.createElement("a");
+        const $link = document.createElement("li");
         $link.className = "list-group-item list-group-item-action";
-        $link.setAttribute("href", "#");
         $link.setAttribute("id", "pokemones");
         $link.textContent = nombre;
         $link.addEventListener("click", () => {

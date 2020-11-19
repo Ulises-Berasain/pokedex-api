@@ -11,82 +11,82 @@
 </head>
 
 <body>
-    <h1 id="titulo"><img src="img/pokedex-logo.png" id="pokedex-logo"></img></h1>
+  <h1 id="titulo"><img src="img/pokedex-logo.png" id="pokedex-logo"></img></h1>
 
-    <div class="pokedex-contenedor">
-        <div id="pokedex">
-            <img src="img/pokemon-logo.png" class="rounded mx-auto d-block" id="pokemon-logo">
-            <p id="error"></p>
-            <input type="text" id="pokemon" placeholder="Ingrese un pokemon"></input>
-            <button type="button" id="boton-ingresar" >Ingresar</button>
-            <p id="total-pokemon-parrafo">Hay un total de <strong id="total-pokemon"></strong> Pokemon</p>
-            <div id="botones">
-                <button type="button" id="boton-anterior">Anterior</button>
-                <button type="button" id="boton-siguiente">Siguiente</button>
-            </div>
-            <div>
-                <nav aria-label="Page navigation example">
-                    <ul class="pagination" id="paginador">
-                    </ul>
-                  </nav>
-                <div id="pokemon-contenedor"></div>
-            </div>
-            <div class="row">
-            <div class="col-4">
-            <div class="list-group" id="lista-pokemon">
+  <div class="pokedex-contenedor">
+    <div id="pokedex">
+      <div id="input-contenedor">
+        <img src="img/pokemon-logo.png" class="rounded mx-auto d-block" id="pokemon-logo">
+        <p id="error"></p>
+        <input type="text" id="pokemon" placeholder="Ingrese un pokemon"></input>
+        <button type="button" id="boton-ingresar" >Ingresar</button>
+        <p id="total-pokemon-parrafo">Hay un total de <strong id="total-pokemon"></strong> Pokemon</p>
+      </div>
 
-            </div>
-            </div>
-            <div class="col-4">
-                <div class="card" style="width: 25rem;" id="tarjeta-pokemon">
-                    <img src="img/que-pokemon.png" id="pokemon-imagen" class="card-img-top">
-                    <div class="card-body" id="cuerpo-tarjeta">
-                      <h1 class="card-title"><strong id="nombre-pokemon">... </strong><strong id="pokemon-id">...</strong></h1>
-                      <div id="estadisticas-base-contenedor">
-                        <strong id="estadisticas-base-titulo">Stats base</strong>
-                        <div id="estadisticas-base">
+      <div id="contenedor-lista">
+        <div id="botones">
+          <button type="button" id="boton-anterior">Anterior</button>
+          <button type="button" id="boton-siguiente">Siguiente</button>
+        </div>
+
+        <div class="list-group" id="lista-pokemon">
+
+        </div>
+
+        <div id="botones">
+          <button type="button" id="boton-anterior">Anterior</button>
+          <button type="button" id="boton-siguiente">Siguiente</button>
+        </div>
+    </div>
+
+        <div class="card" id="tarjeta-pokemon">
+          <img src="img/que-pokemon.png" id="pokemon-imagen" class="card-img-top">
+          <div class="card-body" id="cuerpo-tarjeta">
+            <h1 class="card-title"><strong id="nombre-pokemon">... </strong><strong id="pokemon-id">...</strong></h1>
+            <div id="estadisticas-base-contenedor">
+              <strong id="estadisticas-base-titulo">Stats base</strong>
+              <div id="estadisticas-base">
                             
-                        </div>
-                      </div>
-                      <div id="habilidades-contenedor">
-                        <strong id="habilidades-titulo">Habilidades</strong>
-                        <div id="habilidades">
+              </div>
+            </div>
 
-                        </div>
-                      </div>
-                      <div id="tipos-contenedor">
-                          <strong id="pokemon-tipos">Tipo</strong>
-                          <div id="tipos">
+            <div id="habilidades-contenedor">
+              <strong id="habilidades-titulo">Habilidades</strong>
+              <div id="habilidades">
 
-                          </div>
-                      </div>
-                    </div>
-                </div>
-                
+              </div>
             </div>
-            <div class="col-4">
-            <table class="table" id="tabla">
-                <thead>
-                  <tr>
-                    <th scope="col" id="titulo-tabla">Ataques</th>
-                    <th scope="col" id="titulo-tabla">Versiones</th>
-                  </tr>
-                </thead>
-                <tbody id="ataques">
-                </tbody>
-              </table>
+
+            <div id="tipos-contenedor">
+              <strong id="pokemon-tipos">Tipo</strong>
+              <div id="tipos">
+
+              </div>
             </div>
-         </div>
-            <div id="botones">
-                <button type="button" id="boton-anterior">Anterior</button>
-                <button type="button" id="boton-siguiente">Siguiente</button>
-            </div>
-        </div>
-        <div>
+          </div>
         </div>
 
+        <div id="contenedor-tabla">
+          <table class="table" id="tabla">
+              <thead>
+                <tr>
+                  <th scope="col" id="titulo-tabla">Ataques</th>
+                  <th scope="col" id="titulo-tabla">Versiones</th>
+                </tr>
+              </thead>
+
+              <tbody id="ataques">
+              </tbody>
+          </table>
+        </div>
     </div>
     
-    <script src='src/ui/main.js' type="module"></script>
+    <div>
+
+    </div>
+
+  </div>
+    
+  <script src='src/ui/main.js' type="module"></script>
 </body>
 </html>
