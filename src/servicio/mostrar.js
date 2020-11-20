@@ -1,4 +1,5 @@
 import { cargarTarjetaPokemon } from "../api/pokemon-api.js"
+import { cargarTarjetaPokemonLocalStorage, guardarPokemon } from "../storage/pokemon-storage.js"
 
 export function mostrarTotalPokemon(totalPokemon){
     document.querySelector("#total-pokemon").textContent = totalPokemon;
@@ -6,6 +7,7 @@ export function mostrarTotalPokemon(totalPokemon){
 
 export function mostrarListaPokemon(pokemones){
     const $listaPokemon = document.querySelector("#lista-pokemon");
+    $listaPokemon.innerHTML = "";
     pokemones.forEach((pokemon)=>{
         const {name: nombre} = pokemon;
         const $link = document.createElement("li");
@@ -35,11 +37,17 @@ export function mostrarPokemon(pokemon){
     mostrarAtaques(ataques);
 };
 
-export function mostrarTarjetaPokemon(nombre){
-    cargarTarjetaPokemon(nombre)
-    .then(pokemon =>{
+export async function mostrarTarjetaPokemon(nombre){
+    try{
+        mostrarPokemon(cargarTarjetaPokemonLocalStorage(nombre));
+    }catch(e){
+        await cargarTarjetaPokemon(nombre)
+        .then(pokemon =>{
         mostrarPokemon(pokemon);
+        guardarPokemon(pokemon, nombre)
+
     });
+    }
 }
 
 function mostrarHabilidades(habilidades){

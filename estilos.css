@@ -137,7 +137,7 @@ body{
     background-image: url(img/fondo-batalla.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100vw;
+    background-size: cover;
 }
 
 #habilidades-titulo, #estadisticas-base-titulo, #pokemon-tipos{
@@ -306,6 +306,7 @@ body{
 
 #celda-tabla, #titulo-tabla{
     border: 2px solid black;
+    
 }
 
 @media screen and (min-width: 480px){

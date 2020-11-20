@@ -5,15 +5,17 @@ export function buscarPokemon(){
 
         $botonIngresar.addEventListener("click", ()=>{
             let $nombrePokemon = document.getElementById("pokemon").value;
-            fetch(`https://pokeapi.co/api/v2/pokemon/${$nombrePokemon}`)
+            fetch(`https://pokeapi.co/api/v2/pokemon/${$nombrePokemon.toLowerCase()}`)
             .then(r => r.json())
             .then(r => {
                 const {name: nombre} = r
                 mostrarTarjetaPokemon(nombre);
                 document.getElementById("error").innerHTML = "";
+                document.getElementById("pokemon").value = "";
             })
             .catch(error => {
-                document.getElementById("error").innerHTML = "Error! ingresar pokemon o ID validos y que su nombre este minuscula";
+                document.getElementById("error").innerHTML = "Error! ingresar Pokemon o ID validos";
+                document.getElementById("pokemon").value = "";
             });
         });
 };
@@ -46,13 +48,15 @@ export function cambiarPaginaAnterior(anteriorUrl){
             fetch(anteriorUrl)
             .then(r => r.json())
             .then(r => {
-                const $listaPokemon = document.querySelector("#lista-pokemon");
-                $listaPokemon.innerHTML = ""
-                const {count: totalPokemon, results: pokemones, next: siguienteUrl, previous: anteriorUrl} = r;
-                mostrarTotalPokemon(totalPokemon);
-                mostrarListaPokemon(pokemones);
-                cambiarPaginaSiguiente(siguienteUrl);
-                cambiarPaginaAnterior(anteriorUrl);
+                if(anteriorUrl){
+                    const $listaPokemon = document.querySelector("#lista-pokemon");
+                    $listaPokemon.innerHTML = ""
+                    const {count: totalPokemon, results: pokemones, next: siguienteUrl, previous: anteriorUrl} = r;
+                    mostrarTotalPokemon(totalPokemon);
+                    mostrarListaPokemon(pokemones);
+                    cambiarPaginaSiguiente(siguienteUrl);
+                    cambiarPaginaAnterior(anteriorUrl);
+                }
             });
         });
     });

@@ -20,7 +20,7 @@
         <p id="error"></p>
         <input type="text" id="pokemon" placeholder="Ingrese un pokemon"></input>
         <button type="button" id="boton-ingresar" >Ingresar</button>
-        <p id="total-pokemon-parrafo">Hay un total de <strong id="total-pokemon"></strong> Pokemon</p>
+        <p id="total-pokemon-parrafo">Hay un total de <strong id="total-pokemon">...</strong> Pokemon</p>
       </div>
 
       <div id="contenedor-lista">
@@ -29,7 +29,7 @@
           <button type="button" id="boton-siguiente">Siguiente</button>
         </div>
 
-        <div class="list-group" id="lista-pokemon">
+        <div class="list-group" id="lista-pokemon"><p>Cargando...</p>
 
         </div>
 
@@ -37,34 +37,34 @@
           <button type="button" id="boton-anterior">Anterior</button>
           <button type="button" id="boton-siguiente">Siguiente</button>
         </div>
-    </div>
+      </div>
 
-        <div class="card" id="tarjeta-pokemon">
-          <img src="img/que-pokemon.png" id="pokemon-imagen" class="card-img-top">
-          <div class="card-body" id="cuerpo-tarjeta">
-            <h1 class="card-title"><strong id="nombre-pokemon">... </strong><strong id="pokemon-id">...</strong></h1>
-            <div id="estadisticas-base-contenedor">
-              <strong id="estadisticas-base-titulo">Stats base</strong>
-              <div id="estadisticas-base">
+      <div class="card" id="tarjeta-pokemon">
+        <img src="img/que-pokemon.png" id="pokemon-imagen" class="card-img-top">
+        <div class="card-body" id="cuerpo-tarjeta">
+          <h1 class="card-title"><strong id="nombre-pokemon">... </strong><strong id="pokemon-id">...</strong></h1>
+          <div id="estadisticas-base-contenedor">
+            <strong id="estadisticas-base-titulo">Stats base</strong>
+            <div id="estadisticas-base">
                             
-              </div>
             </div>
+          </div>
 
-            <div id="habilidades-contenedor">
-              <strong id="habilidades-titulo">Habilidades</strong>
-              <div id="habilidades">
+          <div id="habilidades-contenedor">
+            <strong id="habilidades-titulo">Habilidades</strong>
+            <div id="habilidades">
 
-              </div>
             </div>
+          </div>
 
-            <div id="tipos-contenedor">
-              <strong id="pokemon-tipos">Tipo</strong>
-              <div id="tipos">
+          <div id="tipos-contenedor">
+            <strong id="pokemon-tipos">Tipo</strong>
+            <div id="tipos">
 
-              </div>
             </div>
           </div>
         </div>
+      </div>
 
         <div id="contenedor-tabla">
           <table class="table" id="tabla">
@@ -79,10 +79,6 @@
               </tbody>
           </table>
         </div>
-    </div>
-    
-    <div>
-
     </div>
 
   </div>
