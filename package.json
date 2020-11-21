@@ -6,6 +6,8 @@
   "scripts": {
     "server": "http-server",
     "cypress-dev": "cypress open",
+    "cypress-run": "cypress run",
+    "cypress-server": "run-p server cypress-dev",
     "jest-dev": "jest"
   },
   "repository": {
@@ -24,9 +26,10 @@
     "@types/jest": "^26.0.13",
     "@types/jquery": "^3.5.1",
     "babel-jest": "^26.3.0",
-    "cypress": "^4.12.1",
+    "cypress": "^5.6.0",
     "eslint": "^7.7.0",
     "jest": "^26.4.2",
+    "npm-run-all": "^4.1.5",
     "popper.js": "^1.16.1"
   },
   "dependencies": {
